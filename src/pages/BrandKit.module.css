@@ -1,0 +1,317 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.pageTitle { font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+.pageSub { font-size: 14px; color: var(--muted); }
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.leftCol, .rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.fullWidth { grid-column: 1 / -1; }
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.formGroup label, .fontLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border);
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.chip:hover { border-color: var(--primary); color: var(--primary); }
+.chipActive {
+  background: var(--light-fill);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.logoLabel {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.logoLabel span { color: var(--muted); font-weight: 400; }
+.uploadZone {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 20px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 100px;
+  justify-content: center;
+}
+.uploadZone:hover { border-color: var(--primary); background: var(--light-fill); }
+.uploadZone span:first-child { font-size: 20px; }
+.uploadZone p { font-size: 12px; font-weight: 600; }
+.uploadNote { font-size: 10px; color: var(--muted); }
+.logoPreview {
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 100px;
+  justify-content: center;
+}
+.logoIconLg { font-size: 32px; }
+.logoActions { display: flex; gap: 8px; }
+.smallBtn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.smallBtn:hover { border-color: var(--primary); color: var(--primary); }
+.smallBtnDanger:hover { border-color: var(--danger); color: var(--danger); }
+
+.colorList { display: flex; flex-direction: column; gap: 14px; }
+.colorRow { display: flex; align-items: center; gap: 14px; }
+.colorSwatch {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  padding: 3px;
+  flex-shrink: 0;
+}
+.colorInfo { flex: 1; }
+.colorLabel { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: var(--muted); }
+.hexInput { font-size: 13px; padding: 7px 12px; font-family: monospace; }
+.colorPreviewBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(0,0,0,0.1);
+}
+.addColor {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+  text-align: left;
+  transition: opacity 0.15s;
+}
+.addColor:hover { opacity: 0.7; }
+
+.fontGroup { display: flex; flex-direction: column; }
+.fontPreview {
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.fontPreviewBody {
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.voiceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* TAG INPUT */
+.tagInput {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-input);
+  padding: 8px 10px;
+  min-height: 44px;
+  align-items: center;
+  background: #fff;
+  cursor: text;
+}
+.tagInput:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(108,99,255,0.1); }
+.uspTag {
+  background: var(--light-fill);
+  color: var(--primary);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.uspRemove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+}
+.inlineInput {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-family: var(--font-body);
+  min-width: 80px;
+  flex: 1;
+  background: transparent;
+  color: var(--text);
+}
+
+/* BRAND PREVIEW */
+.previewNote { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.brandPreview {
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  gap: 24px;
+}
+.brandPreviewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.brandLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  width: fit-content;
+}
+.brandHeadline {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.brandDesc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+}
+.brandCta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+}
+.brandColorSwatches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.swatchBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+.brandUsps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.brandUspTag {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border-radius: 99px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.brandImg {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.brandImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

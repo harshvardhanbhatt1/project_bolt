@@ -1,0 +1,66 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.errorNum {
+  font-family: var(--font-heading);
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -8px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.illustration {
+  margin: 0 auto 24px;
+  width: 200px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.subtext {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 380px;
+  margin: 0 auto 36px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
